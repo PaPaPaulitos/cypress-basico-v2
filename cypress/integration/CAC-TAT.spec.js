@@ -114,10 +114,21 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.selectArchiveSimulatingDragAndDrop()
     })
 
-    it.only('seleciona um arquivo utilizando uma fixture para a qual foi dada um alias', function() {
+    it('seleciona um arquivo utilizando uma fixture para a qual foi dada um alias', function() {
         cy.selectArchiveWithAlias()
     })
 
+    it('verifica que a política de privacidade abre em outra aba sem a necessidade de um clique', function() {
+        cy.verifyPolicyTermsOpenInNewWindowsWithouClick()
+    })
+
+    it('acessa a página da política de privacidade removendo o target e então clicando no link', function() {
+        cy.verifyPolicyTermsOpenRemovingLink()
+    })
+
+    it('testa a página da política de privacidade de forma independente', function() {
+        cy.checkingLink()
+    })
 
 })
 

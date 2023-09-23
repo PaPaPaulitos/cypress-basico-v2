@@ -101,3 +101,16 @@ Cypress.Commands.add('selectArchiveWithAlias',function(){
     .selectFile('@sampleFile')
 })
 
+Cypress.Commands.add('verifyPolicyTermsOpenInNewWindowsWithouClick',function(){
+    cy.get('a').should('have.attr', 'target', '_blank')
+})
+
+
+Cypress.Commands.add('verifyPolicyTermsOpenRemovingLink',function(){
+    cy.get('a').invoke('removeAttr', 'target')
+})
+
+Cypress.Commands.add('checkingLink',function(){
+    cy.get('a').click()
+})
+
