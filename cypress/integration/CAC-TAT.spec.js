@@ -125,9 +125,38 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     it('acessa a página da política de privacidade removendo o target e então clicando no link', function() {
         cy.verifyPolicyTermsOpenRemovingLink()
     })
-
+    /**
     it('testa a página da política de privacidade de forma independente', function() {
         cy.checkingLink()
+    })
+    **/
+    
+    it('Verificando se a mensagem de sucesso desaparece após 3 segundos', function() {
+        cy.chekingSucess()
+    })
+
+    Cypress._.times(5,() =>{
+        it('Verificando se a mensagem de Erro desaparece após 3 segundos', function() {
+            cy.chekingError()
+        })
+    })
+
+    it('exibe e esconde as mensagens de sucesso e erro usando o .invoke()', function() {
+        cy.showAndHideErrorAndSucessMessages()
+    })
+
+    it('preenche a area de texto usando o comando invoke',() => {
+        cy.fullingTextAreaWithInvoke()
+
+    })
+
+
+    it('faz uma requisição HTTP',()=>{
+        cy.doHTTPRequest()
+    })
+
+    it.only('encontre o gato',() => {
+        cy.findTheCat()
     })
 
 })
