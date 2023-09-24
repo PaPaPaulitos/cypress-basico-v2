@@ -155,7 +155,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.doHTTPRequest()
     })
 
-    it.only('encontre o gato',() => {
+    it('encontre o gato',() => {
         cy.findTheCat()
     })
 
