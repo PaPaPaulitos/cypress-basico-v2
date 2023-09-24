@@ -159,6 +159,10 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.findTheCat()
     })
 
+    it('Teste qualquer mesmo',()=>{
+        cy.showAndHideErrorAndSucessMessages()
+    })
+
 })
 
  
